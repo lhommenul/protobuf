@@ -1,0 +1,314 @@
+// =============================================================================
+// MARKETPLACE CORE PROTOBUF SCHEMAS - VERSION SIMPLE POC
+// =============================================================================
+
+syntax = "proto3";
+
+package marketplace.v1;
+
+option go_package = "github.com/lhommenul/protobuf";
+
+import "google/protobuf/timestamp.proto";
+
+// =============================================================================
+// USER MANAGEMENT
+// =============================================================================
+
+message User {
+  string id = 1;                                    // UUID unique
+  string email = 2;                                 // Email principal
+  string username = 3;                              // Nom d'utilisateur unique
+  string first_name = 4;                            // Prénom
+  string last_name = 5;                             // Nom de famille
+  string phone = 6;                                 // Téléphone (optionnel)
+  string wallet_address = 7;                        // Adresse blockchain (optionnel)
+  UserType type = 8;                                // Type d'utilisateur
+  UserStatus status = 9;                            // Statut du compte
+  google.protobuf.Timestamp created_at = 10;        // Date de création
+  google.protobuf.Timestamp updated_at = 11;        // Dernière mise à jour
+  float reputation_score = 12;                      // Score de réputation (0-5)
+  int32 total_sales = 13;                          // Nombre total de ventes
+  int32 total_purchases = 14;                      // Nombre total d'achats
+}
+
+enum UserType {
+  USER_TYPE_UNSPECIFIED = 0;
+  USER_TYPE_INDIVIDUAL = 1;                        // Particulier
+  USER_TYPE_PROFESSIONAL = 2;                      // Professionnel
+  USER_TYPE_BUSINESS = 3;                          // Entreprise
+}
+
+enum UserStatus {
+  USER_STATUS_UNSPECIFIED = 0;
+  USER_STATUS_ACTIVE = 1;
+  USER_STATUS_SUSPENDED = 2;
+  USER_STATUS_PENDING_VERIFICATION = 3;
+}
+
+// =============================================================================
+// PRODUCT MANAGEMENT
+// =============================================================================
+
+message Product {
+  string id = 1;                                    // UUID unique
+  string seller_id = 2;                            // ID du vendeur
+  string title = 3;                                // Titre du produit
+  string description = 4;                          // Description détaillée
+  string category_id = 5;                          // ID de la catégorie
+  ProductCondition condition = 6;                  // État du produit
+  ProductStatus status = 7;                        // Statut de la vente
+  Price price = 8;                                 // Prix et devise
+  repeated string image_urls = 9;                  // URLs des images
+  repeated string ipfs_hashes = 10;                // Hashes IPFS des images
+  Location location = 11;                          // Localisation
+  google.protobuf.Timestamp created_at = 12;       // Date de création
+  google.protobuf.Timestamp updated_at = 13;       // Dernière mise à jour
+  map<string, string> attributes = 14;             // Attributs spécifiques (couleur, taille, etc.)
+  int32 view_count = 15;                           // Nombre de vues
+  bool is_featured = 16;                           // Produit mis en avant
+  string blockchain_tx_hash = 17;                  // Hash transaction blockchain
+}
+
+message Price {
+  double amount = 1;                               // Montant
+  string currency = 2;                             // Devise (EUR, USD, ETH, MATIC...)
+  bool negotiable = 3;                             // Prix négociable
+}
+
+message Location {
+  string address = 1;                              // Adresse complète
+  string city = 2;                                 // Ville
+  string postal_code = 3;                          // Code postal
+  string country = 4;                              // Pays
+  double latitude = 5;                             // Latitude (optionnel)
+  double longitude = 6;                            // Longitude (optionnel)
+}
+
+enum ProductCondition {
+  PRODUCT_CONDITION_UNSPECIFIED = 0;
+  PRODUCT_CONDITION_NEW = 1;                       // Neuf
+  PRODUCT_CONDITION_LIKE_NEW = 2;                  // Comme neuf
+  PRODUCT_CONDITION_VERY_GOOD = 3;                 // Très bon état
+  PRODUCT_CONDITION_GOOD = 4;                      // Bon état
+  PRODUCT_CONDITION_FAIR = 5;                      // État moyen
+  PRODUCT_CONDITION_POOR = 6;                      // Mauvais état
+  PRODUCT_CONDITION_FOR_PARTS = 7;                 // Pour pièces
+}
+
+enum ProductStatus {
+  PRODUCT_STATUS_UNSPECIFIED = 0;
+  PRODUCT_STATUS_DRAFT = 1;                        // Brouillon
+  PRODUCT_STATUS_ACTIVE = 2;                       // En vente
+  PRODUCT_STATUS_SOLD = 3;                         // Vendu
+  PRODUCT_STATUS_RESERVED = 4;                     // Réservé
+  PRODUCT_STATUS_REMOVED = 5;                      // Retiré de la vente
+}
+
+// =============================================================================
+// CATEGORY MANAGEMENT
+// =============================================================================
+
+message Category {
+  string id = 1;                                   // UUID unique
+  string name = 2;                                 // Nom de la catégorie
+  string description = 3;                          // Description
+  string parent_id = 4;                            // ID catégorie parent (hiérarchie)
+  string icon_url = 5;                             // URL de l'icône
+  int32 sort_order = 6;                            // Ordre d'affichage
+  bool is_active = 7;                              // Catégorie active
+  repeated CategoryAttribute attributes = 8;        // Attributs spécifiques à la catégorie
+}
+
+message CategoryAttribute {
+  string key = 1;                                  // Clé de l'attribut
+  string label = 2;                                // Libellé affiché
+  AttributeType type = 3;                          // Type de l'attribut
+  bool required = 4;                               // Obligatoire
+  repeated string options = 5;                     // Options pour SELECT/RADIO
+}
+
+enum AttributeType {
+  ATTRIBUTE_TYPE_UNSPECIFIED = 0;
+  ATTRIBUTE_TYPE_TEXT = 1;                         // Texte libre
+  ATTRIBUTE_TYPE_NUMBER = 2;                       // Nombre
+  ATTRIBUTE_TYPE_SELECT = 3;                       // Liste déroulante
+  ATTRIBUTE_TYPE_CHECKBOX = 4;                     // Cases à cocher
+  ATTRIBUTE_TYPE_DATE = 5;                         // Date
+}
+
+// =============================================================================
+// ORDER MANAGEMENT
+// =============================================================================
+
+message Order {
+  string id = 1;                                   // UUID unique
+  string buyer_id = 2;                             // ID de l'acheteur
+  string seller_id = 3;                            // ID du vendeur
+  repeated OrderItem items = 4;                    // Articles commandés
+  Price total_amount = 5;                          // Montant total
+  OrderStatus status = 6;                          // Statut de la commande
+  ShippingAddress shipping_address = 7;            // Adresse de livraison
+  PaymentInfo payment_info = 8;                    // Informations de paiement
+  google.protobuf.Timestamp created_at = 9;        // Date de création
+  google.protobuf.Timestamp updated_at = 10;       // Dernière mise à jour
+  string blockchain_escrow_address = 11;           // Adresse escrow blockchain
+  repeated OrderEvent events = 12;                 // Historique des événements
+}
+
+message OrderItem {
+  string product_id = 1;                           // ID du produit
+  string product_title = 2;                        // Titre du produit (snapshot)
+  Price unit_price = 3;                            // Prix unitaire
+  int32 quantity = 4;                              // Quantité (généralement 1 pour l'occasion)
+  Price total_price = 5;                           // Prix total de l'article
+}
+
+message ShippingAddress {
+  string recipient_name = 1;                       // Nom du destinataire
+  string address_line1 = 2;                        // Ligne d'adresse 1
+  string address_line2 = 3;                        // Ligne d'adresse 2
+  string city = 4;                                 // Ville
+  string postal_code = 5;                          // Code postal
+  string country = 6;                              // Pays
+  string phone = 7;                                // Téléphone de contact
+}
+
+message PaymentInfo {
+  PaymentMethod method = 1;                        // Méthode de paiement
+  PaymentStatus status = 2;                        // Statut du paiement
+  string transaction_id = 3;                       // ID de transaction
+  string blockchain_tx_hash = 4;                   // Hash transaction blockchain
+  google.protobuf.Timestamp paid_at = 5;           // Date de paiement
+}
+
+message OrderEvent {
+  string id = 1;                                   // UUID de l'événement
+  OrderEventType type = 2;                         // Type d'événement
+  string description = 3;                          // Description
+  google.protobuf.Timestamp timestamp = 4;         // Horodatage
+  string actor_id = 5;                             // ID de l'utilisateur qui a déclenché l'événement
+}
+
+enum OrderStatus {
+  ORDER_STATUS_UNSPECIFIED = 0;
+  ORDER_STATUS_PENDING = 1;                        // En attente
+  ORDER_STATUS_CONFIRMED = 2;                      // Confirmée
+  ORDER_STATUS_PAID = 3;                           // Payée
+  ORDER_STATUS_SHIPPED = 4;                        // Expédiée
+  ORDER_STATUS_DELIVERED = 5;                      // Livrée
+  ORDER_STATUS_COMPLETED = 6;                      // Terminée
+  ORDER_STATUS_CANCELLED = 7;                      // Annulée
+  ORDER_STATUS_DISPUTED = 8;                       // En litige
+}
+
+enum PaymentMethod {
+  PAYMENT_METHOD_UNSPECIFIED = 0;
+  PAYMENT_METHOD_CREDIT_CARD = 1;                  // Carte de crédit
+  PAYMENT_METHOD_PAYPAL = 2;                       // PayPal
+  PAYMENT_METHOD_BANK_TRANSFER = 3;                // Virement bancaire
+  PAYMENT_METHOD_ETH = 4;                          // Ethereum
+  PAYMENT_METHOD_MATIC = 5;                        // Polygon MATIC
+  PAYMENT_METHOD_USDC = 6;                         // USD Coin
+  PAYMENT_METHOD_CASH = 7;                         // Espèces (remise en main propre)
+}
+
+enum PaymentStatus {
+  PAYMENT_STATUS_UNSPECIFIED = 0;
+  PAYMENT_STATUS_PENDING = 1;                      // En attente
+  PAYMENT_STATUS_COMPLETED = 2;                    // Complété
+  PAYMENT_STATUS_FAILED = 3;                       // Échoué
+  PAYMENT_STATUS_REFUNDED = 4;                     // Remboursé
+  PAYMENT_STATUS_ESCROWED = 5;                     // En escrow
+}
+
+enum OrderEventType {
+  ORDER_EVENT_TYPE_UNSPECIFIED = 0;
+  ORDER_EVENT_TYPE_CREATED = 1;                    // Commande créée
+  ORDER_EVENT_TYPE_CONFIRMED = 2;                  // Commande confirmée
+  ORDER_EVENT_TYPE_PAID = 3;                       // Paiement effectué
+  ORDER_EVENT_TYPE_SHIPPED = 4;                    // Expédition
+  ORDER_EVENT_TYPE_DELIVERED = 5;                  // Livraison
+  ORDER_EVENT_TYPE_CANCELLED = 6;                  // Annulation
+  ORDER_EVENT_TYPE_DISPUTED = 7;                   // Litige ouvert
+}
+
+// =============================================================================
+// REVIEW SYSTEM
+// =============================================================================
+
+message Review {
+  string id = 1;                                   // UUID unique
+  string order_id = 2;                             // ID de la commande associée
+  string reviewer_id = 3;                          // ID de l'évaluateur
+  string reviewee_id = 4;                          // ID de l'évalué
+  ReviewType type = 5;                             // Type d'évaluation
+  int32 rating = 6;                                // Note (1-5)
+  string title = 7;                                // Titre de l'avis
+  string comment = 8;                              // Commentaire
+  google.protobuf.Timestamp created_at = 9;        // Date de création
+  bool is_verified = 10;                           // Avis vérifié (achat confirmé)
+  string blockchain_tx_hash = 11;                  // Hash transaction blockchain
+}
+
+enum ReviewType {
+  REVIEW_TYPE_UNSPECIFIED = 0;
+  REVIEW_TYPE_SELLER = 1;                          // Évaluation du vendeur
+  REVIEW_TYPE_BUYER = 2;                           // Évaluation de l'acheteur
+  REVIEW_TYPE_PRODUCT = 3;                         // Évaluation du produit
+}
+
+// =============================================================================
+// API RESPONSES & REQUESTS
+// =============================================================================
+
+// Réponses paginées génériques
+message PaginatedResponse {
+  int32 page = 1;                                  // Numéro de page
+  int32 page_size = 2;                             // Taille de page
+  int32 total_count = 3;                           // Total d'éléments
+  int32 total_pages = 4;                           // Total de pages
+  bool has_next = 5;                               // Page suivante disponible
+  bool has_previous = 6;                           // Page précédente disponible
+}
+
+// Réponse standard API
+message ApiResponse {
+  bool success = 1;                                // Succès de l'opération
+  string message = 2;                              // Message de retour
+  string error_code = 3;                           // Code d'erreur (si applicable)
+  google.protobuf.Timestamp timestamp = 4;         // Horodatage de la réponse
+}
+
+// Recherche produits
+message ProductSearchRequest {
+  string query = 1;                                // Terme de recherche
+  string category_id = 2;                          // Filtrer par catégorie
+  ProductCondition condition = 3;                  // Filtrer par état
+  PriceRange price_range = 4;                      // Fourchette de prix
+  Location location = 5;                           // Localisation
+  int32 max_distance_km = 6;                       // Distance max en km
+  int32 page = 7;                                  // Numéro de page
+  int32 page_size = 8;                             // Taille de page
+  ProductSortBy sort_by = 9;                       // Tri
+}
+
+message PriceRange {
+  double min_amount = 1;                           // Prix minimum
+  double max_amount = 2;                           // Prix maximum
+  string currency = 3;                             // Devise
+}
+
+enum ProductSortBy {
+  PRODUCT_SORT_BY_UNSPECIFIED = 0;
+  PRODUCT_SORT_BY_CREATED_DESC = 1;                // Plus récents
+  PRODUCT_SORT_BY_PRICE_ASC = 2;                   // Prix croissant
+  PRODUCT_SORT_BY_PRICE_DESC = 3;                  // Prix décroissant
+  PRODUCT_SORT_BY_DISTANCE = 4;                    // Distance
+  PRODUCT_SORT_BY_POPULARITY = 5;                  // Popularité
+}
+
+message ProductSearchResponse {
+  repeated Product products = 1;                   // Liste des produits
+  PaginatedResponse pagination = 2;                // Informations de pagination
+  map<string, int32> facets = 3;                   // Compteurs par facette
+}

@@ -1,0 +1,9 @@
+{
+  "name": "marketplace-proto-js",
+  "version": "1.0.0",
+  "description": "Marketplace Protocol Buffers - JavaScript Client",
+  "main": "index.js",
+  "dependencies": {
+    "google-protobuf": "^3.21.2"
+  }
+}
