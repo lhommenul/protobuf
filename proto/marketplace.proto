@@ -6,7 +6,7 @@ syntax = "proto3";
 
 package marketplace.v1;
 
-option go_package = "github.com/lhommenul/protobuf/gen/go/marketplace";
+option go_package = "github.com/lhommenul/protobuf";
 
 import "google/protobuf/timestamp.proto";
 
