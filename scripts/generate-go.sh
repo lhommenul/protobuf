@@ -8,7 +8,7 @@ set -e
 
 PROTO_DIR="./proto"
 GO_OUT_DIR="./gen/go"
-MODULE_NAME="github.com/lhommenul/protobuf"
+MODULE_NAME="github.com/lhommenul/protobuf/gen/go/marketplace"
 
 echo "🚀 Génération des clients Go..."
 

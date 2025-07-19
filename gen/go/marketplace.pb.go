@@ -6,7 +6,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.30.2
-// source: Marketplace.proto
+// source: marketplace.proto
 
 package marketplace
 
@@ -62,11 +62,11 @@ func (x UserType) String() string {
 }
 
 func (UserType) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[0].Descriptor()
+	return file_marketplace_proto_enumTypes[0].Descriptor()
 }
 
 func (UserType) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[0]
+	return &file_marketplace_proto_enumTypes[0]
 }
 
 func (x UserType) Number() protoreflect.EnumNumber {
@@ -75,7 +75,7 @@ func (x UserType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use UserType.Descriptor instead.
 func (UserType) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{0}
+	return file_marketplace_proto_rawDescGZIP(), []int{0}
 }
 
 type UserStatus int32
@@ -114,11 +114,11 @@ func (x UserStatus) String() string {
 }
 
 func (UserStatus) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[1].Descriptor()
+	return file_marketplace_proto_enumTypes[1].Descriptor()
 }
 
 func (UserStatus) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[1]
+	return &file_marketplace_proto_enumTypes[1]
 }
 
 func (x UserStatus) Number() protoreflect.EnumNumber {
@@ -127,7 +127,7 @@ func (x UserStatus) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use UserStatus.Descriptor instead.
 func (UserStatus) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{1}
+	return file_marketplace_proto_rawDescGZIP(), []int{1}
 }
 
 type ProductCondition int32
@@ -178,11 +178,11 @@ func (x ProductCondition) String() string {
 }
 
 func (ProductCondition) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[2].Descriptor()
+	return file_marketplace_proto_enumTypes[2].Descriptor()
 }
 
 func (ProductCondition) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[2]
+	return &file_marketplace_proto_enumTypes[2]
 }
 
 func (x ProductCondition) Number() protoreflect.EnumNumber {
@@ -191,7 +191,7 @@ func (x ProductCondition) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ProductCondition.Descriptor instead.
 func (ProductCondition) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{2}
+	return file_marketplace_proto_rawDescGZIP(), []int{2}
 }
 
 type ProductStatus int32
@@ -236,11 +236,11 @@ func (x ProductStatus) String() string {
 }
 
 func (ProductStatus) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[3].Descriptor()
+	return file_marketplace_proto_enumTypes[3].Descriptor()
 }
 
 func (ProductStatus) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[3]
+	return &file_marketplace_proto_enumTypes[3]
 }
 
 func (x ProductStatus) Number() protoreflect.EnumNumber {
@@ -249,7 +249,7 @@ func (x ProductStatus) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ProductStatus.Descriptor instead.
 func (ProductStatus) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{3}
+	return file_marketplace_proto_rawDescGZIP(), []int{3}
 }
 
 type AttributeType int32
@@ -294,11 +294,11 @@ func (x AttributeType) String() string {
 }
 
 func (AttributeType) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[4].Descriptor()
+	return file_marketplace_proto_enumTypes[4].Descriptor()
 }
 
 func (AttributeType) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[4]
+	return &file_marketplace_proto_enumTypes[4]
 }
 
 func (x AttributeType) Number() protoreflect.EnumNumber {
@@ -307,7 +307,7 @@ func (x AttributeType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use AttributeType.Descriptor instead.
 func (AttributeType) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{4}
+	return file_marketplace_proto_rawDescGZIP(), []int{4}
 }
 
 type OrderStatus int32
@@ -361,11 +361,11 @@ func (x OrderStatus) String() string {
 }
 
 func (OrderStatus) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[5].Descriptor()
+	return file_marketplace_proto_enumTypes[5].Descriptor()
 }
 
 func (OrderStatus) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[5]
+	return &file_marketplace_proto_enumTypes[5]
 }
 
 func (x OrderStatus) Number() protoreflect.EnumNumber {
@@ -374,7 +374,7 @@ func (x OrderStatus) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use OrderStatus.Descriptor instead.
 func (OrderStatus) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{5}
+	return file_marketplace_proto_rawDescGZIP(), []int{5}
 }
 
 type PaymentMethod int32
@@ -425,11 +425,11 @@ func (x PaymentMethod) String() string {
 }
 
 func (PaymentMethod) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[6].Descriptor()
+	return file_marketplace_proto_enumTypes[6].Descriptor()
 }
 
 func (PaymentMethod) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[6]
+	return &file_marketplace_proto_enumTypes[6]
 }
 
 func (x PaymentMethod) Number() protoreflect.EnumNumber {
@@ -438,7 +438,7 @@ func (x PaymentMethod) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use PaymentMethod.Descriptor instead.
 func (PaymentMethod) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{6}
+	return file_marketplace_proto_rawDescGZIP(), []int{6}
 }
 
 type PaymentStatus int32
@@ -483,11 +483,11 @@ func (x PaymentStatus) String() string {
 }
 
 func (PaymentStatus) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[7].Descriptor()
+	return file_marketplace_proto_enumTypes[7].Descriptor()
 }
 
 func (PaymentStatus) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[7]
+	return &file_marketplace_proto_enumTypes[7]
 }
 
 func (x PaymentStatus) Number() protoreflect.EnumNumber {
@@ -496,7 +496,7 @@ func (x PaymentStatus) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use PaymentStatus.Descriptor instead.
 func (PaymentStatus) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{7}
+	return file_marketplace_proto_rawDescGZIP(), []int{7}
 }
 
 type OrderEventType int32
@@ -547,11 +547,11 @@ func (x OrderEventType) String() string {
 }
 
 func (OrderEventType) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[8].Descriptor()
+	return file_marketplace_proto_enumTypes[8].Descriptor()
 }
 
 func (OrderEventType) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[8]
+	return &file_marketplace_proto_enumTypes[8]
 }
 
 func (x OrderEventType) Number() protoreflect.EnumNumber {
@@ -560,7 +560,7 @@ func (x OrderEventType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use OrderEventType.Descriptor instead.
 func (OrderEventType) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{8}
+	return file_marketplace_proto_rawDescGZIP(), []int{8}
 }
 
 type ReviewType int32
@@ -599,11 +599,11 @@ func (x ReviewType) String() string {
 }
 
 func (ReviewType) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[9].Descriptor()
+	return file_marketplace_proto_enumTypes[9].Descriptor()
 }
 
 func (ReviewType) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[9]
+	return &file_marketplace_proto_enumTypes[9]
 }
 
 func (x ReviewType) Number() protoreflect.EnumNumber {
@@ -612,7 +612,7 @@ func (x ReviewType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ReviewType.Descriptor instead.
 func (ReviewType) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{9}
+	return file_marketplace_proto_rawDescGZIP(), []int{9}
 }
 
 type ProductSortBy int32
@@ -657,11 +657,11 @@ func (x ProductSortBy) String() string {
 }
 
 func (ProductSortBy) Descriptor() protoreflect.EnumDescriptor {
-	return file_Marketplace_proto_enumTypes[10].Descriptor()
+	return file_marketplace_proto_enumTypes[10].Descriptor()
 }
 
 func (ProductSortBy) Type() protoreflect.EnumType {
-	return &file_Marketplace_proto_enumTypes[10]
+	return &file_marketplace_proto_enumTypes[10]
 }
 
 func (x ProductSortBy) Number() protoreflect.EnumNumber {
@@ -670,7 +670,7 @@ func (x ProductSortBy) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ProductSortBy.Descriptor instead.
 func (ProductSortBy) EnumDescriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{10}
+	return file_marketplace_proto_rawDescGZIP(), []int{10}
 }
 
 type User struct {
@@ -695,7 +695,7 @@ type User struct {
 
 func (x *User) Reset() {
 	*x = User{}
-	mi := &file_Marketplace_proto_msgTypes[0]
+	mi := &file_marketplace_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -707,7 +707,7 @@ func (x *User) String() string {
 func (*User) ProtoMessage() {}
 
 func (x *User) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[0]
+	mi := &file_marketplace_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -720,7 +720,7 @@ func (x *User) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use User.ProtoReflect.Descriptor instead.
 func (*User) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{0}
+	return file_marketplace_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *User) GetId() string {
@@ -846,7 +846,7 @@ type Product struct {
 
 func (x *Product) Reset() {
 	*x = Product{}
-	mi := &file_Marketplace_proto_msgTypes[1]
+	mi := &file_marketplace_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -858,7 +858,7 @@ func (x *Product) String() string {
 func (*Product) ProtoMessage() {}
 
 func (x *Product) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[1]
+	mi := &file_marketplace_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -871,7 +871,7 @@ func (x *Product) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Product.ProtoReflect.Descriptor instead.
 func (*Product) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{1}
+	return file_marketplace_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Product) GetId() string {
@@ -1004,7 +1004,7 @@ type Price struct {
 
 func (x *Price) Reset() {
 	*x = Price{}
-	mi := &file_Marketplace_proto_msgTypes[2]
+	mi := &file_marketplace_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1016,7 +1016,7 @@ func (x *Price) String() string {
 func (*Price) ProtoMessage() {}
 
 func (x *Price) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[2]
+	mi := &file_marketplace_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1029,7 +1029,7 @@ func (x *Price) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Price.ProtoReflect.Descriptor instead.
 func (*Price) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{2}
+	return file_marketplace_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *Price) GetAmount() float64 {
@@ -1067,7 +1067,7 @@ type Location struct {
 
 func (x *Location) Reset() {
 	*x = Location{}
-	mi := &file_Marketplace_proto_msgTypes[3]
+	mi := &file_marketplace_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1079,7 +1079,7 @@ func (x *Location) String() string {
 func (*Location) ProtoMessage() {}
 
 func (x *Location) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[3]
+	mi := &file_marketplace_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1092,7 +1092,7 @@ func (x *Location) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Location.ProtoReflect.Descriptor instead.
 func (*Location) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{3}
+	return file_marketplace_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *Location) GetAddress() string {
@@ -1153,7 +1153,7 @@ type Category struct {
 
 func (x *Category) Reset() {
 	*x = Category{}
-	mi := &file_Marketplace_proto_msgTypes[4]
+	mi := &file_marketplace_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1165,7 +1165,7 @@ func (x *Category) String() string {
 func (*Category) ProtoMessage() {}
 
 func (x *Category) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[4]
+	mi := &file_marketplace_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1178,7 +1178,7 @@ func (x *Category) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Category.ProtoReflect.Descriptor instead.
 func (*Category) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{4}
+	return file_marketplace_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *Category) GetId() string {
@@ -1250,7 +1250,7 @@ type CategoryAttribute struct {
 
 func (x *CategoryAttribute) Reset() {
 	*x = CategoryAttribute{}
-	mi := &file_Marketplace_proto_msgTypes[5]
+	mi := &file_marketplace_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1262,7 +1262,7 @@ func (x *CategoryAttribute) String() string {
 func (*CategoryAttribute) ProtoMessage() {}
 
 func (x *CategoryAttribute) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[5]
+	mi := &file_marketplace_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1275,7 +1275,7 @@ func (x *CategoryAttribute) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryAttribute.ProtoReflect.Descriptor instead.
 func (*CategoryAttribute) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{5}
+	return file_marketplace_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CategoryAttribute) GetKey() string {
@@ -1333,7 +1333,7 @@ type Order struct {
 
 func (x *Order) Reset() {
 	*x = Order{}
-	mi := &file_Marketplace_proto_msgTypes[6]
+	mi := &file_marketplace_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1345,7 +1345,7 @@ func (x *Order) String() string {
 func (*Order) ProtoMessage() {}
 
 func (x *Order) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[6]
+	mi := &file_marketplace_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1358,7 +1358,7 @@ func (x *Order) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Order.ProtoReflect.Descriptor instead.
 func (*Order) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{6}
+	return file_marketplace_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *Order) GetId() string {
@@ -1458,7 +1458,7 @@ type OrderItem struct {
 
 func (x *OrderItem) Reset() {
 	*x = OrderItem{}
-	mi := &file_Marketplace_proto_msgTypes[7]
+	mi := &file_marketplace_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1470,7 +1470,7 @@ func (x *OrderItem) String() string {
 func (*OrderItem) ProtoMessage() {}
 
 func (x *OrderItem) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[7]
+	mi := &file_marketplace_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1483,7 +1483,7 @@ func (x *OrderItem) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrderItem.ProtoReflect.Descriptor instead.
 func (*OrderItem) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{7}
+	return file_marketplace_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *OrderItem) GetProductId() string {
@@ -1536,7 +1536,7 @@ type ShippingAddress struct {
 
 func (x *ShippingAddress) Reset() {
 	*x = ShippingAddress{}
-	mi := &file_Marketplace_proto_msgTypes[8]
+	mi := &file_marketplace_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1548,7 +1548,7 @@ func (x *ShippingAddress) String() string {
 func (*ShippingAddress) ProtoMessage() {}
 
 func (x *ShippingAddress) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[8]
+	mi := &file_marketplace_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1561,7 +1561,7 @@ func (x *ShippingAddress) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ShippingAddress.ProtoReflect.Descriptor instead.
 func (*ShippingAddress) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{8}
+	return file_marketplace_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *ShippingAddress) GetRecipientName() string {
@@ -1626,7 +1626,7 @@ type PaymentInfo struct {
 
 func (x *PaymentInfo) Reset() {
 	*x = PaymentInfo{}
-	mi := &file_Marketplace_proto_msgTypes[9]
+	mi := &file_marketplace_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1638,7 +1638,7 @@ func (x *PaymentInfo) String() string {
 func (*PaymentInfo) ProtoMessage() {}
 
 func (x *PaymentInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[9]
+	mi := &file_marketplace_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1651,7 +1651,7 @@ func (x *PaymentInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PaymentInfo.ProtoReflect.Descriptor instead.
 func (*PaymentInfo) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{9}
+	return file_marketplace_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *PaymentInfo) GetMethod() PaymentMethod {
@@ -1702,7 +1702,7 @@ type OrderEvent struct {
 
 func (x *OrderEvent) Reset() {
 	*x = OrderEvent{}
-	mi := &file_Marketplace_proto_msgTypes[10]
+	mi := &file_marketplace_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1714,7 +1714,7 @@ func (x *OrderEvent) String() string {
 func (*OrderEvent) ProtoMessage() {}
 
 func (x *OrderEvent) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[10]
+	mi := &file_marketplace_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1727,7 +1727,7 @@ func (x *OrderEvent) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrderEvent.ProtoReflect.Descriptor instead.
 func (*OrderEvent) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{10}
+	return file_marketplace_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *OrderEvent) GetId() string {
@@ -1784,7 +1784,7 @@ type Review struct {
 
 func (x *Review) Reset() {
 	*x = Review{}
-	mi := &file_Marketplace_proto_msgTypes[11]
+	mi := &file_marketplace_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1796,7 +1796,7 @@ func (x *Review) String() string {
 func (*Review) ProtoMessage() {}
 
 func (x *Review) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[11]
+	mi := &file_marketplace_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1809,7 +1809,7 @@ func (x *Review) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Review.ProtoReflect.Descriptor instead.
 func (*Review) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{11}
+	return file_marketplace_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *Review) GetId() string {
@@ -1904,7 +1904,7 @@ type PaginatedResponse struct {
 
 func (x *PaginatedResponse) Reset() {
 	*x = PaginatedResponse{}
-	mi := &file_Marketplace_proto_msgTypes[12]
+	mi := &file_marketplace_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1916,7 +1916,7 @@ func (x *PaginatedResponse) String() string {
 func (*PaginatedResponse) ProtoMessage() {}
 
 func (x *PaginatedResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[12]
+	mi := &file_marketplace_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1929,7 +1929,7 @@ func (x *PaginatedResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PaginatedResponse.ProtoReflect.Descriptor instead.
 func (*PaginatedResponse) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{12}
+	return file_marketplace_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *PaginatedResponse) GetPage() int32 {
@@ -1987,7 +1987,7 @@ type ApiResponse struct {
 
 func (x *ApiResponse) Reset() {
 	*x = ApiResponse{}
-	mi := &file_Marketplace_proto_msgTypes[13]
+	mi := &file_marketplace_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1999,7 +1999,7 @@ func (x *ApiResponse) String() string {
 func (*ApiResponse) ProtoMessage() {}
 
 func (x *ApiResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[13]
+	mi := &file_marketplace_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2012,7 +2012,7 @@ func (x *ApiResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponse.ProtoReflect.Descriptor instead.
 func (*ApiResponse) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{13}
+	return file_marketplace_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *ApiResponse) GetSuccess() bool {
@@ -2061,7 +2061,7 @@ type ProductSearchRequest struct {
 
 func (x *ProductSearchRequest) Reset() {
 	*x = ProductSearchRequest{}
-	mi := &file_Marketplace_proto_msgTypes[14]
+	mi := &file_marketplace_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2073,7 +2073,7 @@ func (x *ProductSearchRequest) String() string {
 func (*ProductSearchRequest) ProtoMessage() {}
 
 func (x *ProductSearchRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[14]
+	mi := &file_marketplace_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2086,7 +2086,7 @@ func (x *ProductSearchRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProductSearchRequest.ProtoReflect.Descriptor instead.
 func (*ProductSearchRequest) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{14}
+	return file_marketplace_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *ProductSearchRequest) GetQuery() string {
@@ -2163,7 +2163,7 @@ type PriceRange struct {
 
 func (x *PriceRange) Reset() {
 	*x = PriceRange{}
-	mi := &file_Marketplace_proto_msgTypes[15]
+	mi := &file_marketplace_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2175,7 +2175,7 @@ func (x *PriceRange) String() string {
 func (*PriceRange) ProtoMessage() {}
 
 func (x *PriceRange) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[15]
+	mi := &file_marketplace_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2188,7 +2188,7 @@ func (x *PriceRange) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PriceRange.ProtoReflect.Descriptor instead.
 func (*PriceRange) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{15}
+	return file_marketplace_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *PriceRange) GetMinAmount() float64 {
@@ -2223,7 +2223,7 @@ type ProductSearchResponse struct {
 
 func (x *ProductSearchResponse) Reset() {
 	*x = ProductSearchResponse{}
-	mi := &file_Marketplace_proto_msgTypes[16]
+	mi := &file_marketplace_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2235,7 +2235,7 @@ func (x *ProductSearchResponse) String() string {
 func (*ProductSearchResponse) ProtoMessage() {}
 
 func (x *ProductSearchResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_Marketplace_proto_msgTypes[16]
+	mi := &file_marketplace_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2248,7 +2248,7 @@ func (x *ProductSearchResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProductSearchResponse.ProtoReflect.Descriptor instead.
 func (*ProductSearchResponse) Descriptor() ([]byte, []int) {
-	return file_Marketplace_proto_rawDescGZIP(), []int{16}
+	return file_marketplace_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *ProductSearchResponse) GetProducts() []*Product {
@@ -2272,11 +2272,11 @@ func (x *ProductSearchResponse) GetFacets() map[string]int32 {
 	return nil
 }
 
-var File_Marketplace_proto protoreflect.FileDescriptor
+var File_marketplace_proto protoreflect.FileDescriptor
 
-const file_Marketplace_proto_rawDesc = "" +
+const file_marketplace_proto_rawDesc = "" +
 	"\n" +
-	"\x11Marketplace.proto\x12\x0emarketplace.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"\x8e\x04\n" +
+	"\x11marketplace.proto\x12\x0emarketplace.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"\x8e\x04\n" +
 	"\x04User\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n" +
 	"\x05email\x18\x02 \x01(\tR\x05email\x12\x1a\n" +
@@ -2551,20 +2551,20 @@ const file_Marketplace_proto_rawDesc = "" +
 	"\x1aPRODUCT_SORT_BY_POPULARITY\x10\x05B2Z0github.com/lhommenul/protobuf/gen/go/marketplaceb\x06proto3"
 
 var (
-	file_Marketplace_proto_rawDescOnce sync.Once
-	file_Marketplace_proto_rawDescData []byte
+	file_marketplace_proto_rawDescOnce sync.Once
+	file_marketplace_proto_rawDescData []byte
 )
 
-func file_Marketplace_proto_rawDescGZIP() []byte {
-	file_Marketplace_proto_rawDescOnce.Do(func() {
-		file_Marketplace_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_Marketplace_proto_rawDesc), len(file_Marketplace_proto_rawDesc)))
+func file_marketplace_proto_rawDescGZIP() []byte {
+	file_marketplace_proto_rawDescOnce.Do(func() {
+		file_marketplace_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_marketplace_proto_rawDesc), len(file_marketplace_proto_rawDesc)))
 	})
-	return file_Marketplace_proto_rawDescData
+	return file_marketplace_proto_rawDescData
 }
 
-var file_Marketplace_proto_enumTypes = make([]protoimpl.EnumInfo, 11)
-var file_Marketplace_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
-var file_Marketplace_proto_goTypes = []any{
+var file_marketplace_proto_enumTypes = make([]protoimpl.EnumInfo, 11)
+var file_marketplace_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
+var file_marketplace_proto_goTypes = []any{
 	(UserType)(0),                 // 0: marketplace.v1.UserType
 	(UserStatus)(0),               // 1: marketplace.v1.UserStatus
 	(ProductCondition)(0),         // 2: marketplace.v1.ProductCondition
@@ -2597,7 +2597,7 @@ var file_Marketplace_proto_goTypes = []any{
 	nil,                           // 29: marketplace.v1.ProductSearchResponse.FacetsEntry
 	(*timestamppb.Timestamp)(nil), // 30: google.protobuf.Timestamp
 }
-var file_Marketplace_proto_depIdxs = []int32{
+var file_marketplace_proto_depIdxs = []int32{
 	0,  // 0: marketplace.v1.User.type:type_name -> marketplace.v1.UserType
 	1,  // 1: marketplace.v1.User.status:type_name -> marketplace.v1.UserStatus
 	30, // 2: marketplace.v1.User.created_at:type_name -> google.protobuf.Timestamp
@@ -2643,27 +2643,27 @@ var file_Marketplace_proto_depIdxs = []int32{
 	0,  // [0:38] is the sub-list for field type_name
 }
 
-func init() { file_Marketplace_proto_init() }
-func file_Marketplace_proto_init() {
-	if File_Marketplace_proto != nil {
+func init() { file_marketplace_proto_init() }
+func file_marketplace_proto_init() {
+	if File_marketplace_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_Marketplace_proto_rawDesc), len(file_Marketplace_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_marketplace_proto_rawDesc), len(file_marketplace_proto_rawDesc)),
 			NumEnums:      11,
 			NumMessages:   19,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_Marketplace_proto_goTypes,
-		DependencyIndexes: file_Marketplace_proto_depIdxs,
-		EnumInfos:         file_Marketplace_proto_enumTypes,
-		MessageInfos:      file_Marketplace_proto_msgTypes,
+		GoTypes:           file_marketplace_proto_goTypes,
+		DependencyIndexes: file_marketplace_proto_depIdxs,
+		EnumInfos:         file_marketplace_proto_enumTypes,
+		MessageInfos:      file_marketplace_proto_msgTypes,
 	}.Build()
-	File_Marketplace_proto = out.File
-	file_Marketplace_proto_goTypes = nil
-	file_Marketplace_proto_depIdxs = nil
+	File_marketplace_proto = out.File
+	file_marketplace_proto_goTypes = nil
+	file_marketplace_proto_depIdxs = nil
 }
