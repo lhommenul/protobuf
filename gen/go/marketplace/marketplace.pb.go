@@ -8,7 +8,7 @@
 // 	protoc        v6.30.2
 // source: marketplace.proto
 
-package _go
+package marketplace
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -2548,7 +2548,7 @@ const file_marketplace_proto_rawDesc = "" +
 	"\x19PRODUCT_SORT_BY_PRICE_ASC\x10\x02\x12\x1e\n" +
 	"\x1aPRODUCT_SORT_BY_PRICE_DESC\x10\x03\x12\x1c\n" +
 	"\x18PRODUCT_SORT_BY_DISTANCE\x10\x04\x12\x1e\n" +
-	"\x1aPRODUCT_SORT_BY_POPULARITY\x10\x05B&Z$github.com/lhommenul/protobuf/gen/gob\x06proto3"
+	"\x1aPRODUCT_SORT_BY_POPULARITY\x10\x05B2Z0github.com/lhommenul/protobuf/gen/go/marketplaceb\x06proto3"
 
 var (
 	file_marketplace_proto_rawDescOnce sync.Once
