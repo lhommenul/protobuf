@@ -1,4 +1,4 @@
-module github.com/lhommenul/protobuf
+module github.com/lhommenul/protobuf/gen/go/marketplace
 
 go 1.24.4
 
