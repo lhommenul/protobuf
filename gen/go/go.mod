@@ -1,4 +1,4 @@
-module github.com/thirdshop/marketplace-proto
+module github.com/lhommenul/protobuf
 
 go 1.24.4
 
